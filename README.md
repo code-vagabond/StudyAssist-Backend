@@ -1,6 +1,6 @@
 # StudyAssist Backend #
 
-StudyAssist Backend ist based on the Flask-Admin module and provides the application with a module database. The examination office can login to modify and publish module information. Student can use the HRZ-Account to login and track their progress.
+StudyAssist Backend ist based on the Flask-Admin module and provides the application with basic admin functionalities. The examination office can login as admin to modify and publish module information. Student can use the HRZ-Account to login and track their progress.
 
 Later on function to fetch module informations will be implemented. 
 
