@@ -12,7 +12,7 @@ The Backend uses SQLAlchemy as a data abstraction.
 
 ```sh
 git clone https://github.com/code-vagabond/StudyAssist-Backend.git
-cd flask-admin
+cd StudyAssist-Backend.git
 ```
 
 2. Create and activate a virtual environment::
