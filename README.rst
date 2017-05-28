@@ -1,11 +1,16 @@
-This example shows how to integrate Flask-Security (https://pythonhosted.org/Flask-Security/) with Flask-Admin using the SQLAlchemy backend. It only implements
-the 'login' & 'register' views, but you could follow the same approach for using all of Flask-Security's builtin views (e.g. 'forgot password', 'change password', 'reset password', 'send confirmation' and 'send login').
+## StudyAssist Backend ##
+
+StudyAssist Backend ist based on the Flask-Admin module and provides the application with a module database. The examination office can login to modify and publish module information. Student can use the HRZ-Account to login and track their progress.
+
+Later on function to fetch module informations will be implemented. 
+
+The Backend uses SQLAlchemy as a data abstraction.
 
 To run this example:
 
 1. Clone the repository::
 
-     git clone https://github.com/flask-admin/flask-admin.git
+     git clone https://github.com/code-vagabond/StudyAssist-Backend.git
      cd flask-admin
 
 2. Create and activate a virtual environment::
@@ -19,7 +24,7 @@ To run this example:
 
 4. Run the application::
 
-     python examples/auth/app.py
+     python app.py
 
 The first time you run this example, a sample sqlite database gets populated automatically. To suppress this behaviour,
 comment the following lines in app.py:::
