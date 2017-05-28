@@ -1,4 +1,4 @@
-## StudyAssist Backend ##
+# StudyAssist Backend #
 
 StudyAssist Backend ist based on the Flask-Admin module and provides the application with a module database. The examination office can login to modify and publish module information. Student can use the HRZ-Account to login and track their progress.
 
@@ -6,7 +6,7 @@ Later on function to fetch module informations will be implemented.
 
 The Backend uses SQLAlchemy as a data abstraction.
 
-To run this example:
+# Install and run:
 
 1. Clone the repository::
 
