@@ -1,0 +1,379 @@
+body {
+  background-color: #ddd;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+.badge {
+  background-color: #777;
+}
+
+.tabs-left {
+  margin-top: 1em;
+}
+
+.nav-tabs {
+  float: left;
+  border-bottom: 0;
+}
+.nav-tabs li {
+  float: none;
+  margin: 0;
+}
+.nav-tabs li a {
+  color: #ffffff;
+  padding: 20px 20px;
+  margin-right: 0;
+  border: 0;
+  background-color: #333;
+}
+.nav-tabs li a:hover {
+  background-color: #444;
+}
+.nav-tabs .glyphicon {
+  color: #fff;
+}
+.nav-tabs .active .glyphicon {
+  color: #333;
+}
+
+.main-nav .active .glyphicon {
+  color: #fff;
+  text-shadow: 0px 1px 16px #fff;
+}
+
+.main-nav > li.active > a, .main-nav > li.active > a:hover, .main-nav > li.active > a:focus {
+  border: 0;
+  background-color: #333;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  border: 0;
+}
+
+.tab-content {
+  margin-left: 45px;
+}
+.tab-content .tab-pane {
+  height: 600px;
+  display: none;
+  background-color: #fff;
+  padding: 1.6rem;
+  overflow-y: auto;
+}
+
+.tab-content .active {
+  display: table;
+  height: 400px;
+}
+
+.list-group {
+  width: 100%;
+}
+.list-group .list-group-item {
+  height: 50px;
+}
+.list-group .list-group-item h4, .list-group .list-group-item span {
+  line-height: 11px;
+}
+
+
+.list {
+  background-color: #E3E3E3;
+  border-radius: 3px;
+  margin: 5px 5px;
+  padding: 10px;
+  width: 260px;
+  float: left;
+}
+.list>header {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  cursor: grab;
+}
+header {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  cursor: grab;
+}
+.module-name {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+}
+.list article {
+  border-radius: 3px;
+  margin-top: 5px;
+}
+
+.list .card {
+  background-color: #FFF;
+  border-bottom: 1px solid #CCC;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+.list .card:hover {
+  background-color: #F0F0F0;
+}
+.list .card:active {
+  color: #fff;
+  background: #111;
+  border: 1px solid #000;
+  border-right: 1px solid #353535;
+  border-bottom: 1px solid #353535;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.bestanden {
+  color: #fff;
+  background: #111;
+  padding: 6px 8px;
+  border: 1px solid #000;
+  border-right: 1px solid #353535;
+  border-bottom: 1px solid #353535;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.vorgemerkt {
+  color: #fff;
+  background: rgba(17, 17, 17, 0.68);
+  padding: 6px 8px;
+  border: 2px dotted #fdc13c;
+/*  border-right: 2px dotted rgba(17, 17, 17, 0.68);
+  border-bottom: 2px dotted rgba(17, 17, 17, 0.68);*/
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.detail {
+  font-weight: normal;
+  font-size: 12px;
+/*  color: rgb(64, 228, 64);*/
+}
+.hidden {
+  display: none;
+}
+[data-fakenode] {
+  background-color: gray;
+}
+
+.module-icon {
+  float: right;
+  color: #333333;
+}
+
+.module-reference:hover {
+  color: #2780e3;
+}
+
+.logo {
+  margin-top: 5px;
+  margin-right: 140px;
+  float: right;
+  width: 100px;
+}
+
+.semester-indicator {
+  float:right;
+  padding-right: 2em;
+  margin-top: 20px;
+  margin-bottom: 0px;
+
+}
+
+.semester-indicator-btn {
+  background-color: rgba(51, 51, 51, 0.9);
+  border-color: rgba(51, 51, 51, 0.9);
+}
+
+/*
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: #222;
+}*/
+
+.ul-semester-indicator {
+  font-size: 0;
+  position: relative;
+  padding: 0;
+  width: 480px;
+  margin: 0px auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.li-semester-indicator {
+  box-shadow: 1px 1px 1px 1px #cecece;
+  display: inline-block;
+  width: 160px;
+  height: 60px;
+  background: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  line-height: 60px;
+  color: #333;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.slider {
+  display: inline-block;
+  width: 160px;
+  height: 60px;
+  background: #39CCCC;
+  font-size: 16px;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  background: #005ea8;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+
+}
+
+/*  Ripple */
+
+.ripple {
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  position: absolute;
+  opacity: 1;
+}
+
+.rippleEffect {
+  -webkit-animation: rippleDrop .6s linear;
+          animation: rippleDrop .6s linear;
+}
+
+@-webkit-keyframes rippleDrop {
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes rippleDrop {
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.bestanden-icon {
+  display: inline-block;
+  font-weight: normal;
+  font-size: 10px;
+  color: rgb(64, 228, 64);
+
+  background: #111;
+  border: 1px solid rgb(64, 228, 64);
+  border-right: 1px solid rgb(64, 228, 64);
+  border-bottom: 1px solid rgb(64, 228, 64);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+
+}
+
+.vorgemerkt-icon {
+
+  display: inline-block;
+  font-weight: normal;
+  font-size: 10px;
+  color: #fdc13c;
+
+  background: rgba(17, 17, 17, 0.52);
+  border: 1px solid #fdc13c;
+  border-right: 1px solid #fdc13c;
+  border-bottom: 1px solid #fdc13c;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+
+}
+
+.durchgefallen-icon {
+
+  display: inline-block;
+  font-weight: normal;
+  font-size: 10px;
+  color: #f35b5a;
+
+  background: #111;
+  border: 1px solid #f35b5a;
+  border-right: 1px solid #f35b5a;
+  border-bottom: 1px solid #f35b5a;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+
+}
+
+.app-row {
+
+  margin-top: 50px;
+
+}
+
+.navbar-default {
+
+  background-color: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 1px 1px 1px 1px #cecece;
+
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-brand:hover {
+  font-size: 30px;
+  color: #358cbb;
+}
+
+.btn-primary.btn-outline {
+    color:#2780e3;
+    margin-right: 20px;
+}
+.btn-outline {
+    background-color: transparent;
+    transition: all .5s;
+}
+.btn-primary.btn-outline:hover,
+.btn-success.btn-outline:hover,
+.btn-info.btn-outline:hover,
+.btn-warning.btn-outline:hover,
+.btn-danger.btn-outline:hover {
+    color: #fff;
+}

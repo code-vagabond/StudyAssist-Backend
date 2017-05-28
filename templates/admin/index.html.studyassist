@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Modulenkatalog</title>
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://bootswatch.com/cosmo/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+<div class="container">
+  <div class="row">
+  <div class="col">
+      <div class="navbar navbar-default">
+
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">StudyAssist</a>
+          </div>
+
+          <div class="container">
+              <div class="navbar-nav navbar-right">
+              <button type="button" class="btn btn-outline btn-primary navbar-btn">Sign in</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
+  <!--<div class="row">     -->
+    <!--<div class="col-6">-->
+      <!--<img src="images/logo.png" class="logo">  -->
+
+      <!--<ul class="ul-semester-indicator">-->
+        <!--<li class="li-semester-indicator">SS 2017</li>-->
+        <!--<li class="li-semester-indicator">WS 2017/2018</li>-->
+        <!--<li class="slider"></li>-->
+      <!--</ul>      -->
+
+
+    <!--</div>-->
+  <!--</div> -->
+
+
+
+
+  <div class="row app-row">  
+    <div class="col">
+        <div class="tabs-left">
+            <ul class="nav nav-tabs main-nav">
+                <li class="active"><a href="#moduluebersicht" data-toggle="tab"><span class="glyphicon glyphicon-pushpin"></span></a></li>
+                <li><a href="#stats" data-toggle="tab"><span class="glyphicon glyphicon-stats"></span></a></li>
+                <li><a href="#calendar" data-toggle="tab"><span class="glyphicon glyphicon-calendar"></span></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-6">  
+      <div class="tabs-left">
+          
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#a" data-toggle="tab">BASIS (8/93 CPs)</a></li>
+          <li><a href="#b" data-toggle="tab">VERTIEFUNG (0/48 CPs) </a></li>
+          <li><a href="#b" data-toggle="tab">NEBENFACH (0/24 CPs) </a></li>
+          <a><div id="circle"></div></a>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="a">
+          <section class="list">
+
+            <article class="card">
+              <a href="#">
+                <span class="glyphicon glyphicon-info-sign module-icon module-reference aria-hidden="true"></span>
+              </a>
+<!--               <span data-toggle="tooltip" title="Bereits bestanden !" class="glyphicon glyphicon-ok-circle module-icon"></span> -->
+              <header>B-DS<header>
+              <header class="module-name">Datenstrukturen</header>
+              <div class="detail">5CPs</div>
+            </article>
+
+            <article class="card">
+              <a href="#">
+                <span class="glyphicon glyphicon-info-sign module-icon module-reference aria-hidden="true"></span>
+              </a>
+              <header>B-GL1</header>
+              <header class="module-name">Theoretische Informatik 1</header>
+              <div class="detail">10CPs</div>
+            </article>
+
+            <article class="bestanden">
+              <a href="#">
+                <span class="glyphicon glyphicon-info-sign module-icon module-reference aria-hidden="true"></span>
+              </a>
+              <header>B-MOD</header>
+              <header class="module-name">Modellierung</header>
+              <div class="detail">8CPs <span class="bestanden-icon"> Bestanden </span></div>
+
+            </article>
+
+            <article class="card">
+              <a href="#">
+                <span class="glyphicon glyphicon-info-sign module-icon module-reference aria-hidden="true"></span>
+              </a>
+              <header>B-HWR</header>
+              <header class="module-name">Hardwarearchitekturen und Rechensysteme</header>
+              <div class="detail">8CPs</div>
+            </article>
+          </section>
+
+          <section class="list">
+
+           <article class="card">
+              <a href="#">
+                <span class="glyphicon glyphicon-info-sign module-icon module-reference aria-hidden="true"></span>
+              </a>
+              <header>B-HW2<header>
+              <header class="module-name">Hardware 2</header>
+              <div class="detail">8CPs</div>
+            </article>
+
+            <article class="card">
+              <a href="#">
+                <span class="glyphicon glyphicon-info-sign module-icon module-reference aria-hidden="true"></span>
+              </a>
+              <header>HWS-PR<header>
+              <header class="module-name">Grundlagen von Hardwaresystemen</header>
+              <div class="detail">8CPs</div>              
+            </article>
+	  
+      	    <article class="vorgemerkt">
+                <a href="#">
+                  <span class="glyphicon glyphicon-info-sign module-icon module-reference aria-hidden="true"></span>
+                </a>
+           	    <header>B-M1</header>
+          	    <header class="module-name">Analysis und Lineare Algebra für die Informatik</header>
+          	    <div class="detail">9CPs <span class="vorgemerkt-icon">vorgemerkt</span></div>
+      	    </article>
+
+            <article class="card">
+                <a href="#">
+                  <span class="glyphicon glyphicon-info-sign module-icon module-reference aria-hidden="true"></span>
+                </a>
+                <header>B-M2</header>
+                <header class="module-name">Diskrete und Numerische Mathematik für die Informatik</header>
+                <div class="detail">9CPs</div>
+            </article>
+
+            <article class="card">
+                <a href="#">
+                  <span class="glyphicon glyphicon-info-sign module-icon module-reference aria-hidden="true"></span>
+                </a>
+                <header>B-M3</header>
+                <header class="module-name">Stochastik für die Informatik</header>
+                <div class="detail">9CPs</div>
+            </article>
+
+          </section>
+
+	  
+          <section class="list">
+
+            <article class="card">
+              <a href="#">
+                <span class="glyphicon glyphicon-info-sign module-icon module-reference aria-hidden="true"></span>
+              </a>
+              <header>B-PRG1</header>
+              <header class="module-name">Grundlagen der Programmierung 1</header>
+              <div class="detail">10CPs</div>
+            </article>
+
+            <article class="card">
+              <a href="#">
+                <span class="glyphicon glyphicon-info-sign module-icon module-reference aria-hidden="true"></span>
+              </a>
+              <header>EPR</header>
+              <header class="module-name">Einführung in die Programmierung</header>
+              <div class="detail">11CPs</div>
+            </article>
+
+            <article class="card">
+              <a href="#">
+                <span class="glyphicon glyphicon-info-sign module-icon module-reference aria-hidden="true"></span>
+              </a>
+              <header>B-PRG2</header>
+              <header class="module-name">Grundlagen der Programmierung 2</header>
+              <div class="detail">8CPs <span class="durchgefallen-icon">1x durchgefallen</span></div>
+            </article>
+
+            <article class="card">
+              <a href="#">
+                <span class="glyphicon glyphicon-info-sign module-icon module-reference aria-hidden="true"></span>
+              </a>
+              <header>B-PRG-PR</header>
+              <header class="module-name">Grundlagen der Programmierung Praktikum</header>
+              <div class="detail">8CPs</div>
+            </article>
+          </section>        
+          </div>
+          <div class="tab-pane" id="b">
+          </div>
+        </div><!-- /tab-content -->
+      </div><!-- /tabbable -->
+    </div><!-- /col -->
+  </div><!-- /row -->
+</div><!-- /container -->
+ <div class="reacttest">
+ 
+ </div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="node_modules/jquery-circle-progress/dist/circle-progress.js"></script>
+    
+    <script src="src/bundle.js"></script>
+
+</body>
+</html>
