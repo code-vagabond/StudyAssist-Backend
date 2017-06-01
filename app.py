@@ -20,7 +20,6 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 user = current_user
 
-form = LoginForm()
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -51,6 +50,7 @@ class LoginForm(FlaskForm):
 
         self.user = user
         return True
+
 
 
 
@@ -125,7 +125,7 @@ def login():
     # Here we use a class of some kind to represent and validate our
     # client-side form data. For example, WTForms is a library that will
     # handle this for us, and we use a custom LoginForm to validate.
-
+    form = LoginForm()
     if form.validate_on_submit():
         # Login and validate the user.
         # user should be an instance of your `User` class
@@ -186,6 +186,15 @@ def dated_url_for(endpoint, **values):
                                      endpoint, filename)
             values['q'] = int(os.stat(file_path).st_mtime)
     return url_for(endpoint, **values)
+
+
+# with app.app_context():
+    # user_role = Role(name='user')
+    # super_user_role = Role(name='superuser')
+    # db.session.add(user_role)
+    # db.session.add(super_user_role)
+    # db.session.commit()
+    # form = LoginForm()
 
 
 if __name__ == '__main__':
