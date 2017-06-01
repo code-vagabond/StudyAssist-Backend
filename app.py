@@ -1,5 +1,5 @@
 import os
-from flask import Flask, url_for, redirect, render_template, request, abort
+from flask import Flask, url_for, redirect, render_template, request, abort, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_security import Security, SQLAlchemyUserDatastore, \
     UserMixin, RoleMixin, login_required, current_user, LoginForm
@@ -8,8 +8,9 @@ import flask_admin
 from flask_admin.contrib import sqla
 from flask_admin import helpers as admin_helpers
 from flask_admin import AdminIndexView, expose
-from flask_login import LoginManager
-from wtforms import TextField, PasswordField, validators
+from flask_login import LoginManager, login_user
+from werkzeug.security import check_password_hash, generate_password_hash
+from wtforms import StringField, PasswordField, SubmitField, validators
 from flask_wtf import FlaskForm
 
 # Create Flask application
@@ -21,13 +22,16 @@ login_manager.init_app(app)
 user = current_user
 
 
+
+
 @login_manager.user_loader
 def load_user(user_id):
     return User.get(user_id)
 
 class LoginForm(FlaskForm):
-    username = TextField('Username', [validators.Required()])
-    password = PasswordField('Password', [validators.Required()])
+    username = StringField('Username', [validators.DataRequired()])
+    password = PasswordField('Password', [validators.DataRequired()])
+    #submit = SubmitField()
 
     def __init__(self, *args, **kwargs):
         FlaskForm.__init__(self, *args, **kwargs)
@@ -75,12 +79,21 @@ class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     first_name = db.Column(db.String(255))
     last_name = db.Column(db.String(255))
+    username = db.Column(db.String(255))
     email = db.Column(db.String(255), unique=True)
     password = db.Column(db.String(255))
     active = db.Column(db.Boolean())
     confirmed_at = db.Column(db.DateTime())
     roles = db.relationship('Role', secondary=roles_users,
                             backref=db.backref('users', lazy='dynamic'))
+
+#    def set_password(self, password):
+#        self.pw_hash = generate_password_hash(password)
+
+    #TODO: Use check_password hash for enduser
+    def check_password(self, password):
+        #return check_password_hash(self.password, password)
+        return self.password == password
 
     def __str__(self):
         return self.email
@@ -91,7 +104,7 @@ user_datastore = SQLAlchemyUserDatastore(db, User, Role)
 security = Security(app, user_datastore)
 
 
-# Create customized model view class
+# Create customized model view class for admin page
 class MyModelView(sqla.ModelView):
 
     def is_accessible(self):
@@ -118,7 +131,7 @@ class MyModelView(sqla.ModelView):
 # Flask views
 @app.route('/')
 def index():
-    return render_template('login.html')
+    return render_template('test.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -126,20 +139,21 @@ def login():
     # client-side form data. For example, WTForms is a library that will
     # handle this for us, and we use a custom LoginForm to validate.
     form = LoginForm()
+    # if form.is_submitted():
     if form.validate_on_submit():
         # Login and validate the user.
         # user should be an instance of your `User` class
         login_user(user)
 
-        flask.flash('Logged in successfully.')
+        flash('Logged in successfully.')
 
-        next = flask.request.args.get('next')
+        next = request.args.get('next')
         # is_safe_url should check if the url is safe for redirects.
         # See http://flask.pocoo.org/snippets/62/ for an example.
-        if not is_safe_url(next):
-            return flask.abort(400)
+        # if not is_safe_url(next):
+            # return flask.abort(400)
 
-        return redirect(next or flask.url_for('index'))
+        return redirect(next or url_for('index'))
     return render_template('login.html', form=form)
 
 class MyHomeView(AdminIndexView):
@@ -186,15 +200,6 @@ def dated_url_for(endpoint, **values):
                                      endpoint, filename)
             values['q'] = int(os.stat(file_path).st_mtime)
     return url_for(endpoint, **values)
-
-
-# with app.app_context():
-    # user_role = Role(name='user')
-    # super_user_role = Role(name='superuser')
-    # db.session.add(user_role)
-    # db.session.add(super_user_role)
-    # db.session.commit()
-    # form = LoginForm()
 
 
 if __name__ == '__main__':

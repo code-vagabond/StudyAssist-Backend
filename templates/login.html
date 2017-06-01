@@ -28,8 +28,10 @@
       <!--<p class="message">Not registered? <a href="#">Create an account</a></p>-->
     <!--</form>-->
     <form method="POST" action="/login">
+        {{ form.hidden_tag() }}
         <div>{{ form.username.label }}: {{ form.username(class="css_class") }}</div>
         <div>{{ form.password.label }}: {{ form.password() }}</div>
+        <input type="submit" value="Go">
     </form>
   </div>
 </div>
