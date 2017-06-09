@@ -6,6 +6,11 @@ Later on function to fetch module informations will be implemented.
 
 The Backend uses SQLAlchemy as a data abstraction.
 
+
+# Using the crawler to fetch data
+StudyAssist fetch data based on student credentials and populate a Postgres Database. First create the postgres database and input the config into crawler/database.ini then run crawler.py to populate this database.
+
+
 # Install and run:
 
 1. Clone the repository::
@@ -32,8 +37,7 @@ pip install -r 'requirements.txt'
 python app.py
 ```
 
-The first time you run this example, a sample sqlite database gets populated automatically. To suppress this behaviour,
-comment the following lines in app.py:::
+
 ```sh
 if not os.path.exists(database_path):
  build_sample_db()
